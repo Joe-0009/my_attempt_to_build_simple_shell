@@ -6,7 +6,7 @@
 * Return : void.
 */
 
-void __exit(char **args)
+void __exiT(char **args)
 {
 	if (_strcmp(args[0], "exit") == 0)
 	{

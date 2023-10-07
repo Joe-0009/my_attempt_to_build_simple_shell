@@ -26,7 +26,7 @@ int execute_external_command(char *path, char *cmd, char **args);
 int execute_builtin_commands(char **args);
 
 /* built_in functions */
-void _exiT(char **args);
+void __exiT(char **args);
 int _env(void);
 char *_strtok(char *str, const char *delim);
 

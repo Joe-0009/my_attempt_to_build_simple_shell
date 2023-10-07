@@ -74,7 +74,7 @@ int execute_builtin_commands(char **args)
 
 	if (strcmp(args[0], "exit") == 0)
 	{
-		_exiT(args);
+		__exiT(args);
 		built_in = 1;
 	}
 	if (strcmp(args[0], "env") == 0)

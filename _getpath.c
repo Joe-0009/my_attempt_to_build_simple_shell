@@ -25,7 +25,7 @@ char *_getpath(const char *command)
 		return strdup(command);
 	}
 	/* Create a copy of the PATH to avoid modifying the original*/
-	 * path_copy = _strdup(path);
+	path_copy = _strdup(path);
 
 	 if (path_copy == NULL)
 	 {
