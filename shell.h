@@ -51,7 +51,7 @@ int _env(void);
 int _setenv(const char *name, const char *value);
 int environ_size(void);
 int _unsetenv(const char *name);
-
+char *_getenv(const char *name);
 
 #endif /*SHEEL_H*/
 

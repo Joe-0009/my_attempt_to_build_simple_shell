@@ -10,7 +10,7 @@
 #include "shell.h"
 
 char *_getpath(const char *command) {
-    char *path = getenv("PATH");
+    char *path = _getenv("PATH");
     char *token = NULL;
     char *full_path = NULL;
     char *path_copy;
