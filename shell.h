@@ -27,9 +27,8 @@ int execute_builtin_commands(char **args);
 
 /* built_in functions */
 void _exiT(char **args);
-int _env(void);
 char *_strtok(char *str, const char *delim);
-
+int _cd(const char *target_dir);
 
 /* alloc functions */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
@@ -46,6 +45,13 @@ char *_strcpy(char *dest, char *src);
 char *_strdup(char *s);
 char *_memcpy(char *dest,char *src, unsigned int n);
 int _strspn(char *s, char *accept);
+
+/*env builtins */
+int _env(void);
+int _setenv(const char *name, const char *value);
+int environ_size(void);
+int _unsetenv(const char *name);
+
 
 #endif /*SHEEL_H*/
 
