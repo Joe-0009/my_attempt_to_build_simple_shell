@@ -9,33 +9,30 @@
  * Returns: An array of strings (tokens) terminated by a NULL pointer
  *          or NULL on failure
  */
-char **get_token(char *cmd, char *delim)
-{
-	char *token;
-	char **args = malloc(MAX_TOKENS * sizeof(char *));
-	unsigned int i = 0;
+char **get_token(char *cmd, char *delim) {
+    char *token;
+    char **args = malloc(MAX_TOKENS * sizeof(char *));
+    unsigned int i = 0;
 
-	if (!args)
-	{
-		perror("Malloc in get_token failed\n");
-		return (NULL);
-	}
+    if (!args) {
+        perror("Malloc in get_token failed\n");
+        return NULL;
+    }
 
-	token = _strtok(cmd, delim);
+    token = _strtok(cmd, delim);
 
-	while (token != NULL)
-	{
-		args[i] = token;
-		i++;
+    while (token != NULL) {
+        args[i] = token;
+        i++;
 
-		if (i >= MAX_TOKENS)
-		{
-			break;
-		}
-		token = _strtok(NULL, delim);
-	}
+        if (i >= MAX_TOKENS) {
+            break;
+        }
 
-	args[i] = NULL;
+        token = _strtok(NULL, delim);
+    }
 
-	return (args);
+    args[i] = NULL;
+
+    return (args);
 }
