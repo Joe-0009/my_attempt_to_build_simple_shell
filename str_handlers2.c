@@ -82,3 +82,28 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	return (dest);
 }
+/**
+ *_strcat - Concatenates two strings.
+ * @destination: Pointer to the destination string.
+ * @source: Pointer to the source string.
+ *
+ * Return: Pointer to the destination string.
+ */
+char *_strcat(char *destination, const char *source)
+{
+	char *dest_ptr = destination;
+	const char *src_ptr = source;
+
+	/*Move dest_ptr to the end of the destination string*/
+	while (*dest_ptr != '\0')
+		dest_ptr++;
+
+	/*Copy characters from source to destination*/
+	while (*src_ptr != '\0')
+		*dest_ptr++ = *src_ptr++;
+	/*Null-terminate the destination string*/
+	*dest_ptr = '\0';
+
+	return destination;
+}
+

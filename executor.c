@@ -74,7 +74,7 @@ int execute_builtin_commands(char **args)
 
 	if (strcmp(args[0], "exit") == 0)
 	{
-		__exiT(args);
+		_exiT(args);
 		built_in = 1;
 	}
 	if (strcmp(args[0], "env") == 0)
@@ -98,6 +98,9 @@ int execute_builtin_commands(char **args)
     }else if (strcmp(args[0], "cd") == 0)
     {
         built_in = _cd(args[1]);
+    }else if (strcmp (args[0], "alias") == 0)
+    {
+	built_in = shell_alias(args + 1, args);
     }
     return built_in;
 }
